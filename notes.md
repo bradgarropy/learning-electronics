@@ -4,10 +4,25 @@
 ssh bradgarropy@raspberrypi.local
 ```
 
+# Python
+
+Run scripts on Raspberry Pi.
+
+```bash
+python script.py
+```
+
+Use `pause()` to suspend program.
+
+```python
+from signal import pause
+
+pause()
+```
+
 # Circuits
 
-[Circuit Canvas][circuit-canvas]  
-[Fritzing][fritzing]
+[Circuit Canvas][circuit-canvas]
 
 # LEDs
 
@@ -22,8 +37,6 @@ Flat side is negative
 [How to use a Multimeter][multimeter]  
 [Raspberry Pi 5 Tutorial][pi-tutorial]
 
-
 [circuit-canvas]: https://circuitcanvas.com
-[fritzing]: https://fritzing.org
 [multimeter]: https://www.youtube.com/watch?v=EvAq9zqRB5I
 [pi-tutorial]: https://www.youtube.com/watch?v=tIEI3sv_gxM
