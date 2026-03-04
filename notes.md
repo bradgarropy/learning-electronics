@@ -6,7 +6,9 @@ ssh bradgarropy@raspberrypi.local
 
 # Python
 
-Run scripts on Raspberry Pi.
+Run scripts on Raspberry Pi.  
+`venv` is an isolated Python environment.  
+`requirements.txt` is like a `package.json`.
 
 ```bash
 python script.py
