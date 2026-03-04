@@ -50,6 +50,24 @@ Buttons require defining a `bounce_time` to avoid jitter.
 [How to use a Multimeter][multimeter]  
 [Raspberry Pi 5 Tutorial][pi-tutorial]
 
+# Projects
+
+## LED Strip Integration
+
+Confirm if LED strip can be connected to Pi.  
+Investigate if LED strip can be controlled.  
+Control with potentiometer or rotary encoder.
+
+## User Controlled LED Strip
+
+Web application where users control individual LEDs.
+
+## Message Marquee
+
+Web application where users can enter messages.  
+Messages are displayed on the LCD screen.  
+Messages scroll across the screen like a marquee.
+
 [circuit-canvas]: https://circuitcanvas.com
 [multimeter]: https://www.youtube.com/watch?v=EvAq9zqRB5I
 [pi-tutorial]: https://www.youtube.com/watch?v=tIEI3sv_gxM
