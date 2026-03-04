@@ -4,7 +4,7 @@ from signal import pause
 led = LED(20)
 button = Button(21, bounce_time=0.05)
 
-mode_fns = [led.off, led.on, led.blink]
+mode_fns = [led.off, led.on, lambda: led.blink(on_time=0.25, off_time=0.25)]
 mode_names = ["off", "on", "blink"]
 
 mode_index = 0
