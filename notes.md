@@ -6,12 +6,19 @@ ssh bradgarropy@raspberrypi.local
 
 # Python
 
-Run scripts on Raspberry Pi.  
-`venv` is an isolated Python environment.  
-`requirements.txt` is like a `package.json`.
+Run scripts on Raspberry Pi.
 
 ```bash
 python script.py
+```
+
+`venv` is an isolated Python environment.  
+`requirements.txt` is like a `package.json`.
+
+`lambda` functions are no argument function wrappers.
+
+```python
+lamba: led.blink(n=5)
 ```
 
 Use `pause()` to suspend program.
