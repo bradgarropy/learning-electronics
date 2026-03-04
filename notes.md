@@ -32,6 +32,10 @@ Short leg is negative
 Round side is positive  
 Flat side is negative
 
+# Buttons
+
+Buttons require defining a `bounce_time` to avoid jitter.
+
 # Videos
 
 [How to use a Multimeter][multimeter]  
