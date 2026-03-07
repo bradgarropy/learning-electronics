@@ -22,8 +22,8 @@ def write_frame(lcd, frame):
 
 def scroll_message(lcd, line1, line2):
     padding = ' ' * COLS
-    padded_line1 = padding + line1 + padding
-    padded_line2 = padding + line2 + padding
+    padded_line1 = padding + line1
+    padded_line2 = padding + line2
     max_len = max(len(padded_line1), len(padded_line2))
 
     for i in range(max_len):
