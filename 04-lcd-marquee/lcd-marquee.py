@@ -7,11 +7,7 @@ DELAY = 0.2
 
 MESSAGES = [
     ("Hey y'all", "@bradgarropy"),
-    ("Helloooooooo", "@selfteachme"),
-    ("Wicki boy", "@iamwix"),
-    ("Soon to be Texan", "@ryanfurrer_"),
-    ("Newly acquired", "@i_am_jlmx"),
-    ("Technical wizard", "@brianmmdev"),
+    ("The Bad Guys", "@juju"),
 ]
 
 def write_frame(lcd, frame):
