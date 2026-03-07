@@ -1,28 +1,49 @@
 from RPLCD.i2c import CharLCD
 import time
 
+COLS = 16
+ROWS = 2
+DELAY = 0.2
+
 MESSAGES = [
-    ("Hey y'all!", "From ATX"),
-    ("Hello World!", "Raspberry Pi"),
-    ("Learning", "Electronics"),
-    ("LCD1602", "Display Demo"),
-    ("Goodbye!", "See ya later"),
+    ("Hey y'all", "@bradgarropy"),
+    ("Helloooooooo", "@selfteachme"),
+    ("Wicki boy", "@iamwix"),
+    ("Soon to be Texan", "@ryanfurrer_"),
+    ("Newly acquired", "@i_am_jlmx"),
+    ("Technical wizard", "@brianmmdev"),
 ]
+
+def write_frame(lcd, frame):
+    lcd.home()
+    for row in frame:
+        lcd.write_string(row.ljust(COLS)[:COLS])
+        lcd.crlf()
+
+def scroll_message(lcd, line1, line2):
+    padding = ' ' * COLS
+    padded_line1 = line1 + padding
+    padded_line2 = line2 + padding
+    max_len = max(len(padded_line1), len(padded_line2))
+
+    for i in range(max_len):
+        frame = [
+            padded_line1[i:i+COLS],
+            padded_line2[i:i+COLS],
+        ]
+        write_frame(lcd, frame)
+        time.sleep(DELAY)
 
 def show_messages(lcd):
     while True:
         for line1, line2 in MESSAGES:
-            lcd.clear()
-            lcd.write_string(line1)
-            lcd.cursor_pos = (1, 0)
-            lcd.write_string(line2)
-            time.sleep(2)
+            scroll_message(lcd, line1, line2)
 
 if __name__ == "__main__":
     lcd = None
 
     try:
-        lcd = CharLCD(i2c_expander='PCF8574', address=0x27, cols=16, rows=2)
+        lcd = CharLCD(i2c_expander='PCF8574', address=0x27, cols=COLS, rows=ROWS)
         show_messages(lcd)
     finally:
         if lcd:
