@@ -1,5 +1,6 @@
 colorzero==2.0
 gpiozero==2.0.1
+lgpio==0.6
 RPLCD==1.4.0
 setuptools==82.0.0
 smbus2==0.6.0
