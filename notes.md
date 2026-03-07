@@ -12,8 +12,19 @@ Run scripts on Raspberry Pi.
 python script.py
 ```
 
-`venv` is an isolated Python environment.  
+`venv` is an isolated Python environment.
+
+```bash
+python3 -m venv .venv
+```
+
+Do not commit your `.venv` directory.
+
 `requirements.txt` is like a `package.json`.
+
+```bash
+pip install -r requirements.txt
+```
 
 `lambda` functions are no argument function wrappers.
 
