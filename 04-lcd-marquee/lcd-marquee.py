@@ -16,7 +16,7 @@ def show_messages(lcd):
             lcd.write_string(line1)
             lcd.cursor_pos = (1, 0)
             lcd.write_string(line2)
-            time.sleep(5)
+            time.sleep(2)
 
 if __name__ == "__main__":
     lcd = None
